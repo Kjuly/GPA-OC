@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- a b c d e f g h i j k l m n o p q r s t u v w x y z -->
+<algor-list>
+
+	<algor>
+		<id>080805jmu</id>
+		<e-name>Jimei University</e-name>
+		<name>集美大学</name>
+	</algor>
+
+	<algor>
+		<id>060506nuistaa</id>
+		<e-name>Nanjing University of Information Science &amp; Technology Alumni Association</e-name>
+		<name>南京信息工程大学</name>
+	</algor>
+
+	<algor>
+		<id>020201uestc</id>
+		<e-name>University of Electronic Science &amp; Technology of China</e-name>
+		<name>中国电子科技大学</name>
+	</algor>
+
+	<algor>
+		<id>060406zjut</id>
+		<e-name>Zhejiang University of Technology</e-name>
+		<name>浙江工业大学</name>
+	</algor>
+
+</algor-list>

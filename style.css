@@ -1,0 +1,178 @@
+/*  
+webfile-calculateor css style
+Author: KJuly
+Blog: http://KJuly.com/
+*/
+
+h2 { margin-bottom:0; }
+
+body {
+	text-align:center;
+	margin:0;
+	padding:0;
+	background:#eee url('../../images/bg.gif');
+	color:#555555;
+	font-size:12px;
+	font-family:Arial;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+#page {
+	width:960px;
+	/*height:1000px;*/
+	height:auto!important; height:300px; min-height:300px;
+	height:auto;
+	margin:auto;
+	text-align:left;
+}
+
+#mainarea {
+	clear:both;
+	width:940px;
+	padding:0;
+	margin:0 10px;
+}
+
+/*#contentarea {
+	width:800px;
+	float:left;
+	padding:0;
+	margin:0;
+	background:#000;
+}*/
+
+/* 
+ * School Add Area
+ */
+#school_add_area { background:#eee url('../../images/bg.gif'); width:900; display:none; border-bottom:1px solid #fff; }
+/*
+ * Hidden Dialog
+ */
+#sa_alert, #sa_error { text-align:center; display:none; width:100%; position:fixed; top:0; z-index:999; }
+#sa_alert .ui-state-highlight p, #sa_error .ui-state-error p { display:inline; line-height:40px;}
+#sa_alert span.ui-icon-info, #sa_error span.ui-icon-alert { margin-right:0.6em; margin-bottom:-3px; display:inline-block;
+	height:auto!important; height:15px; min-height:15px;
+}
+#sa_alert p, #sa_error p { z-index:999; }
+#result_dialog { display:none; text-align:left; padding:0 60px 30px 60px; line-height:30px; }
+#result_dialog a { text-decoration:none; outline:none; color:#f90; font-weight:bold; }
+#result_dialog label { width:100px; height:auto; display:inline-block; text-align:right; }
+#result_dialog span, #result_dialog span.gpa { width:220px; height:auto; display:inline-block; }
+#result_dialog span.gpa { font-size:30px; color:#6099ff; }
+#loading { display:none; height:22px; width:100%; background-image:url('img/loading-bar.gif'); position:fixed; top:0; }
+/*.ui-progressbar { height:22px; text-align:left; border:none; }
+.ui-progressbar .ui-progressbar-value { margin:-1px; height:100%; border:none; background:none; background-image:url('img/loading-bar.gif'); }*/
+/*
+ * Main
+ */
+
+#set_div {
+	width;100%;
+	height:auto!important; height:100px; min-height:100px;
+	margin-top:200px;
+	font-size:12px;
+}
+#set_div .title { background:url('img/tool_title_gpa-calculator.jpg') 0 0 no-repeat; height:60px; width:250px; display:block;
+	margin:0 auto; cursor:help; }
+#set_div:hover .title { background:url('img/tool_title_gpa-calculator.jpg') 0 -60px no-repeat; }
+/* School Choose Area */
+#school_choose_area { width:810px; height:37px; margin:0 auto; }
+#set_div label {
+	float:left;
+	font-size:12px; font-weight:bold; color:#fff;
+	height:15px; width:65px; background:#6099ff;
+	padding:10px 20px; margin:0;
+	border:1px solid #4297d7;
+	-moz-border-radius:6px 0 0 6px;
+	-khtml-border-radius:6px 0 0 6px;
+	-webkit-border-radius:6px 0 0 6px;
+	border-radius:6px 0 0 6px;
+	cursor:pointer;
+}
+* html #set_div label { padding:10px; width:75px; }
+*+ html #set_div label { padding:10px; width:75px; }
+#algor_choose_area { width:810px; height:37px; margin:0 auto; margin-top:3px; display:none; }
+#school_choose_area input:focus, #algor_choose_area input:focus { outline:none; }
+.ui-autocomplete { max-height:300px; width:300px; overflow-y:auto; overflow-x:hidden; }
+ul.ui-autocomplete {
+	list-style-type:none; margin:0; padding:0; text-align:left;
+	-moz-border-radius:0 0 6px 6px;
+	-khtml-border-radius:0 0 6px 6px;
+	-webkit-border-radius:0 0 6px 6px;
+	border-radius:0 0 6px 6px;
+}
+ul.ui-autocomplete li { padding:0; margin:5px 0; cursor:pointer; border-left:none; }
+ul.ui-autocomplete li a {
+	width:100%; height:15px; display:block; padding:5px 20px;
+	-moz-border-radius:0;
+	-khtml-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+.ui-button { margin-left: -1px; height:37px; }
+* html .ui-button { margin-left: -5px; height:37px; }
+.auto_width { width:auto!important; width:110px; min-width:110px; }
+.ui-autocomplete-input {
+	float:left;
+	height:15px; width:520px; margin:0; padding:10px 20px;
+	-moz-border-radius:0;
+	-khtml-border-radius:0;
+	-webkit-border-radius:0;
+	border-radius:0;
+} /*padding:0.48em 0 0.47em 1.45em; }*/
+
+#school_add_but, #algor_info { height:100%; width:90px; margin-left:5px; }
+
+#calculate_form {
+	height:auto!important; height:360px; min-height:360px;
+	margin:0 auto;
+	margin-top:10px;
+	display:none;
+}
+#data_form {
+	/*width:700px; height:375px;*/
+	width:100%; /*height:auto!important; height:355px; min-height:355px;*/
+	/*filter:alpha(opacity=50);
+	-moz-opacity:0.5;
+	opacity0.5;*/
+}
+#data_form #data_bg { background:#f1f1f1;
+	/*width:698px; height:319px;*/
+	width:100%; height:auto!important; height:318px; min-height:318px;
+	padding:20px 0;
+	border:1px solid #4297d7;
+	-moz-border-radius:6px;
+	-khtml-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+#data {
+	width:95%; height:260px; display:block; margin:auto; border:none;
+	padding:10px;
+	-moz-border-radius:6px;
+	-khtml-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+#data:focus { outline:0; }
+
+#data_format_area {
+	width:100%; height:auto;
+	margin:auto;
+	display:none;
+}
+#data_format tbody { font-size:12px; }
+
+#data_below_button_add { text-align:right; margin:10px 10px 0 0; }
+#data_below_button { text-align:right; margin:10px 10px 0 0; }
+#calculate, #calculate_clear { width:100px; }
+#calculate_help { color:#f90; cursor:help; }
+
+/* Footer */
+#footer {
+	float:left; text-align:center; width:100%; height:30px; margin:16px 0 30px 0; border-top:1px dashed; padding:10px 0 60px 0;
+	line-height:16px;	
+}
+#footer a { color:#444; text-decoration:none; }
+#footer a:hover { color:#000; }
